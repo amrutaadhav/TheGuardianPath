@@ -122,8 +122,12 @@ export default function Dashboard() {
                   {mod.title}
                   <VoiceButton text={mod.title + ". " + mod.description} />
                 </h3>
-                <p style={{ flex: 1, fontSize: '1.2rem' }}>{mod.description}</p>
+                <p style={{ flex: 1, fontSize: '1.3rem', color: '#475569', marginBottom: '1rem' }}>{mod.description}</p>
                 
+                <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', background: '#F8FAFC', padding: '1rem', borderRadius: '12px', marginBottom: '1rem', color: '#334155', fontSize: '1.2rem', fontWeight: '700', border: '1px solid #E2E8F0' }}>
+                  <span style={{ background: '#2563EB', color: 'white', padding: '0.3rem 0.8rem', borderRadius: '6px', boxShadow: '0 2px 4px rgba(37,99,235,0.2)' }}>50</span> Interactive Practice Scenarios
+                </div>
+
                 <button 
                   className={completed ? 'btn-success' : (mod.status === 'Ready' ? 'btn-primary' : 'btn-secondary')}
                   style={{ width: '100%', marginTop: '2rem' }}

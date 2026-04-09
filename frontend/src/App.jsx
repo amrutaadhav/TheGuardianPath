@@ -48,15 +48,16 @@ function MainApp() {
               style={{
                 display: 'flex', alignItems: 'center', gap: '0.5rem',
                 background: 'rgba(255,255,255,0.1)', border: '2px solid rgba(255,255,255,0.2)', padding: '0.75rem 1.5rem', borderRadius: '12px',
-                color: '#FFFFFF', fontWeight: 'bold', fontSize: '1.2rem', cursor: 'pointer'
+                color: '#FFFFFF', fontWeight: 'bold', fontSize: '1.4rem', cursor: 'pointer', boxSizing: 'border-box'
               }}
             >
-              <Globe size={24} /> {lang === 'en' ? 'मराठी' : 'English'}
+              <Globe size={20} /> {lang === 'en' ? 'मराठी' : 'English'}
             </button>
             
-            {token && (
-              <>
+            {token ? (
+              <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                 <Link to="/" style={{ 
+                  display: 'flex', alignItems: 'center', boxSizing: 'border-box',
                   fontSize: '1.4rem', fontWeight: 'bold', color: '#FFFFFF', textDecoration: 'none',
                   padding: '0.75rem 1.5rem', borderRadius: '12px', background: 'rgba(255,255,255,0.1)',
                   border: '2px solid rgba(255,255,255,0.2)'
@@ -64,14 +65,19 @@ function MainApp() {
                   {t('dashboard')}
                 </Link>
                 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: 'rgba(255,255,255,0.1)', padding: '0.75rem 1.5rem', borderRadius: '12px', border: '2px solid rgba(255,255,255,0.2)' }}>
-                  <User size={24} color="#FFFFFF" />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(255,255,255,0.1)', padding: '0.75rem 1.5rem', borderRadius: '12px', border: '2px solid rgba(255,255,255,0.2)', boxSizing: 'border-box', cursor: 'pointer', transition: 'background 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.2)'} onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'} title="Active User">
+                  <User size={20} color="#FFFFFF" />
                   <span style={{ color: 'white', fontWeight: 'bold', fontSize: '1.4rem' }}>{user?.username}</span>
-                  <button onClick={logout} style={{ background: 'none', border: 'none', color: '#FCA5A5', cursor: 'pointer', marginLeft: '0.5rem' }} title="Log out">
-                    <LogOut size={24} />
-                  </button>
                 </div>
-              </>
+
+                <button onClick={logout} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#EF4444', color: 'white', padding: '0.75rem 1.5rem', borderRadius: '12px', border: 'none', fontWeight: 'bold', fontSize: '1.4rem', cursor: 'pointer', boxShadow: '0 4px 6px rgba(239, 68, 68, 0.3)', boxSizing: 'border-box' }} title={t('logoutBtn')}>
+                  <LogOut size={20} /> {t('logoutBtn')}
+                </button>
+              </div>
+            ) : (
+              <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#3B82F6', color: 'white', padding: '0.75rem 1.5rem', borderRadius: '12px', border: 'none', fontWeight: 'bold', fontSize: '1.4rem', cursor: 'pointer', boxShadow: '0 4px 6px rgba(59, 130, 246, 0.3)', boxSizing: 'border-box', transition: 'transform 0.1s' }} onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'} onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'} onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'} title={t('loginBtn')}>
+                <User size={20} /> {t('loginBtn')}
+              </button>
             )}
           </div>
         </nav>

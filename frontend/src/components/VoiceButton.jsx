@@ -21,7 +21,7 @@ export default function VoiceButton({ text, lang = 'en-US' }) {
       const utterance = new SpeechSynthesisUtterance(text);
       
       // Set language logic. Basic heuristic for Marathi
-      if (text.match(/[\u0900-\u097F]/)) {
+      if (text && text.match(/[\u0900-\u097F]/)) {
         utterance.lang = 'mr-IN';
       } else {
         utterance.lang = 'en-US';

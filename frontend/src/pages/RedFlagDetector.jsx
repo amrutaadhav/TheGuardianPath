@@ -4,6 +4,7 @@ import { ArrowLeft, AlertTriangle, CheckCircle, Smartphone, Mail, XCircle } from
 import { motion, AnimatePresence } from 'framer-motion';
 import { useProgress } from '../context/ProgressContext';
 import VoiceButton from '../components/VoiceButton';
+import { useLanguage } from '../context/LanguageContext';
 
 // Dynamically import the 50 generated text scenarios!
 import modulesData from '../data/modulesData.json';
@@ -11,20 +12,23 @@ import modulesData from '../data/modulesData.json';
 const quizDataRaw = modulesData.redflags;
 
 export default function RedFlagDetector() {
+  const { lang, t } = useLanguage();
   const navigate = useNavigate();
-  // We'll let them play through the 50 generated quizzes!
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedQuizIndex, setSelectedQuizIndex] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isAnswerRevealed, setIsAnswerRevealed] = useState(false);
   const [score, setScore] = useState(0);
-  const { markComplete } = useProgress();
+  const { markScenarioComplete, completedScenarios } = useProgress();
 
-  const currentQuiz = quizDataRaw[currentQuestionIndex];
-  const isFinished = currentQuestionIndex >= quizDataRaw.length;
+  const currentQuiz = selectedQuizIndex !== null ? quizDataRaw[selectedQuizIndex] : null;
 
+  // We can mark the entire module complete if they do a few, but let's leave it manual for now
+  // or we can mark it complete when they finish ANY quiz just as a demo.
   React.useEffect(() => {
-    if (isFinished) markComplete('redflags');
-  }, [isFinished, markComplete]);
+    if (score > 0 && selectedQuizIndex !== null) {
+      markScenarioComplete('redflags', selectedQuizIndex);
+    }
+  }, [score, selectedQuizIndex, markScenarioComplete]);
 
   const handleSelect = (option) => {
     if (isAnswerRevealed) return; // Prevent clicking again
@@ -39,22 +43,64 @@ export default function RedFlagDetector() {
   const handleNext = () => {
     setSelectedAnswer(null);
     setIsAnswerRevealed(false);
-    setCurrentQuestionIndex(prev => prev + 1);
+    setSelectedQuizIndex(null); // Return to grid
+    setScore(0);
   };
 
-  if (isFinished) {
+  const completedCount = (completedScenarios['redflags'] || []).length;
+
+  // Render the quiz grid if no quiz is selected
+  if (selectedQuizIndex === null) {
     return (
-      <div className="animate-fade-in" style={{ padding: '0 1rem' }}>
-        <div className="glass-panel" style={{ textAlign: 'center', background: '#F8FAFC' }}>
-          <CheckCircle size={100} className="text-success" style={{ margin: '0 auto 2rem auto' }} />
-          <h2 style={{ fontSize: '3.5rem', marginBottom: '1rem', color: 'var(--accent-success)' }}>Quiz Complete!</h2>
-          <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>You got {score} out of {quizDataRaw.length} correct.</p>
-          <p style={{ fontSize: '1.6rem', marginBottom: '3rem' }}>
-            Incredible! You just practiced identifying 50 different Real-World Red Flags.
-          </p>
-          <button className="btn-primary" style={{ padding: '1.5rem 3rem', fontSize: '1.8rem' }} onClick={() => navigate('/')}>
-            Return to Dashboard
-          </button>
+      <div className="animate-fade-in" style={{ padding: '0 1rem', paddingBottom: '3rem' }}>
+        <button className="btn-secondary" onClick={() => navigate('/')} style={{ marginBottom: '2rem' }}>
+          <ArrowLeft size={24} /> {t('goBack')}
+        </button>
+
+        <div style={{ marginBottom: '3rem', textAlign: 'center' }}>
+          <h1 style={{ fontSize: '3rem', color: '#0F172A', marginBottom: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem' }}>
+            <AlertTriangle size={40} color="#3B82F6" /> 50 Practice Scenarios
+            <VoiceButton text="50 Practice Scenarios" />
+          </h1>
+          <p style={{ fontSize: '1.4rem', color: '#475569' }}>Select a scenario card below to test your social engineering defense skills.</p>
+          <div style={{ marginTop: '1.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: completedCount === 50 ? '#D1FAE5' : '#DBEAFE', padding: '0.5rem 1.5rem', borderRadius: '20px', color: completedCount === 50 ? '#047857' : '#1D4ED8', fontWeight: 'bold', fontSize: '1.4rem', border: completedCount === 50 ? '2px solid #10B981' : 'none' }}>
+            {completedCount} / 50 Scenarios Completed
+            {completedCount === 50 && <span>🏆 - MODULE MASTERED</span>}
+          </div>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '1.5rem', maxWidth: '1200px', margin: '0 auto' }}>
+          {quizDataRaw.map((quiz, index) => {
+            const isFinished = (completedScenarios['redflags'] || []).includes(index);
+            return (
+              <motion.div
+                key={quiz.id}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setSelectedQuizIndex(index)}
+                style={{
+                  background: isFinished ? '#D1FAE5' : '#FFFFFF',
+                  border: isFinished ? '2px solid #10B981' : '2px solid #CBD5E1',
+                  borderRadius: '16px',
+                  padding: '2rem 1rem',
+                  textAlign: 'center',
+                  cursor: 'pointer',
+                  boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontWeight: 'bold',
+                  fontSize: '1.5rem',
+                  color: isFinished ? '#047857' : '#1E293B',
+                  transition: 'border-color 0.2s',
+                  position: 'relative'
+                }}
+              >
+                {isFinished && <CheckCircle size={20} color="#059669" style={{ position: 'absolute', top: '10px', right: '10px' }} />}
+                Scenario {index + 1}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     );
@@ -62,7 +108,7 @@ export default function RedFlagDetector() {
 
   return (
     <div className="animate-fade-in" style={{ padding: '0 1rem', paddingBottom: '3rem' }}>
-      <button className="btn-secondary" onClick={() => navigate('/')} style={{ marginBottom: '2rem' }}>
+      <button className="btn-secondary" onClick={() => setSelectedQuizIndex(null)} style={{ marginBottom: '2rem' }}>
         <ArrowLeft size={24} /> Go Back Home
       </button>
 
@@ -72,7 +118,7 @@ export default function RedFlagDetector() {
           <VoiceButton text="The Red Flag Quiz" />
         </h1>
         <div style={{ fontSize: '1.5rem', fontWeight: 'bold', background: '#E2E8F0', padding: '0.5rem 1rem', borderRadius: '12px' }}>
-          Question {currentQuestionIndex + 1} of {quizDataRaw.length}
+          Scenario {selectedQuizIndex + 1}
         </div>
       </div>
 
@@ -82,8 +128,8 @@ export default function RedFlagDetector() {
           {currentQuiz.type === 'sms' ? <Smartphone size={40} className="text-primary"/> : <Mail size={40} className="text-warning"/>}
           <div>
             <h2 style={{ fontSize: '2rem', marginBottom: '1rem', display: 'flex', alignItems: 'center' }}>
-              {currentQuiz.scenario}
-              <VoiceButton text={currentQuiz.scenario} />
+              {currentQuiz?.scenario?.[lang]}
+              <VoiceButton text={currentQuiz?.scenario?.[lang] || ''} />
             </h2>
             <div style={{ 
               background: currentQuiz.type === 'sms' ? '#DCF8C6' : '#F1F5F9', // Whatsapp green for SMS
@@ -94,14 +140,16 @@ export default function RedFlagDetector() {
               fontFamily: '"Helvetica Neue", Arial, sans-serif',
               boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
             }}>
-              "{currentQuiz.message}"
+              "{currentQuiz?.message?.[lang]}"
+              <VoiceButton text={currentQuiz?.message?.[lang] || ''} />
             </div>
           </div>
         </div>
 
         <div style={{ borderTop: '4px solid #E2E8F0', paddingTop: '2rem' }}>
           <h3 style={{ fontSize: '2.2rem', marginBottom: '2rem', color: '#B45309', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <AlertTriangle size={32} /> {currentQuiz.question}
+            <AlertTriangle size={32} /> {currentQuiz?.question?.[lang]}
+            <VoiceButton text={currentQuiz?.question?.[lang] || ''} />
           </h3>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -130,7 +178,8 @@ export default function RedFlagDetector() {
               >
                  {isAnswerRevealed && option.isCorrect && <CheckCircle size={32} className="text-success" />}
                  {isAnswerRevealed && !option.isCorrect && selectedAnswer?.id === option.id && <XCircle size={32} className="text-danger" />}
-                 {option.text}
+                 {option?.text?.[lang]}
+                 <VoiceButton text={option?.text?.[lang] || ''} />
               </button>
             ))}
           </div>
@@ -153,8 +202,8 @@ export default function RedFlagDetector() {
                   {selectedAnswer.isCorrect ? "You Got It Right! 🎉" : "Not Quite. Let's learn why:"}
                 </h4>
                 <p style={{ fontSize: '1.6rem', fontWeight: 'bold', margin: 0, color: '#000', display: 'flex', alignItems: 'center' }}>
-                  {currentQuiz.options.find(opt => opt.isCorrect).explanation}
-                  <VoiceButton text={currentQuiz.options.find(opt => opt.isCorrect).explanation} />
+                  {currentQuiz?.options?.find(opt => opt.isCorrect)?.explanation?.[lang]}
+                  <VoiceButton text={currentQuiz?.options?.find(opt => opt.isCorrect)?.explanation?.[lang] || ''} />
                 </p>
 
                 <button 
@@ -162,7 +211,7 @@ export default function RedFlagDetector() {
                   style={{ marginTop: '2rem', padding: '1.5rem 3rem', fontSize: '1.5rem' }}
                   onClick={handleNext}
                 >
-                  Go to Next Practice Scenario
+                  Return to Scenario Grid
                 </button>
               </div>
             </motion.div>

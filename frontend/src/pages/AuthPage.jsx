@@ -63,13 +63,12 @@ export default function AuthPage() {
           <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '300px', height: '300px', borderRadius: '50%', background: 'rgba(59, 130, 246, 0.2)', filter: 'blur(40px)' }}></div>
           
           <ShieldCheck size={80} color="#60A5FA" style={{ marginBottom: '2rem', position: 'relative', zIndex: 1 }} />
-          <h1 style={{ fontSize: '3.5rem', fontWeight: '800', marginBottom: '1rem', lineHeight: '1.2', position: 'relative', zIndex: 1 }}>
+          <h1 style={{ fontSize: '3.5rem', fontWeight: '800', marginBottom: '1rem', lineHeight: '1.2', position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', gap: '1rem' }}>
             {t('loginTitle')}
             <VoiceButton text={t('loginTitle')} />
           </h1>
           <p style={{ fontSize: '1.5rem', color: '#BFDBFE', fontWeight: '500', lineHeight: '1.6', position: 'relative', zIndex: 1 }}>
-            {t('loginSub')} <br/><br/>
-            Master digital skills in a completely secure, zero-risk sandbox designed to build confidence without fear.
+            {t('safeSpace')} <VoiceButton text={t('safeSpace')} />
           </p>
         </div>
 
@@ -83,8 +82,14 @@ export default function AuthPage() {
         }}>
           
           <div style={{ marginBottom: '2rem' }}>
-            <h2 style={{ fontSize: '2.5rem', color: '#0F172A', marginBottom: '0.5rem' }}>{isLogin ? t('loginBtn') : t('signUpBtn')}</h2>
-            <p style={{ fontSize: '1.3rem', color: '#64748B' }}>Enter your credentials below to proceed.</p>
+            <h2 style={{ fontSize: '2.5rem', color: '#0F172A', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              {isLogin ? t('loginBtn') : t('signUpBtn')}
+              <VoiceButton text={isLogin ? t('loginBtn') : t('signUpBtn')} />
+            </h2>
+            <p style={{ fontSize: '1.3rem', color: '#64748B', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              {t('loginSub')}
+              <VoiceButton text={t('loginSub')} />
+            </p>
           </div>
 
           <AnimatePresence>
@@ -103,7 +108,7 @@ export default function AuthPage() {
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
             <div>
               <label style={{ fontSize: '1.3rem', fontWeight: '700', display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '0.75rem', color: '#334155', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                <User size={18} color="#3B82F6" /> {t('username')}
+                <User size={18} color="#3B82F6" /> {t('username')} <VoiceButton text={t('username')} />
               </label>
               <input 
                 type="text" 
@@ -119,7 +124,7 @@ export default function AuthPage() {
 
             <div>
               <label style={{ fontSize: '1.3rem', fontWeight: '700', display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '0.75rem', color: '#334155', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                <Lock size={18} color="#3B82F6" /> {t('password')}
+                <Lock size={18} color="#3B82F6" /> {t('password')} <VoiceButton text={t('password')} />
               </label>
               <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
                 <input 

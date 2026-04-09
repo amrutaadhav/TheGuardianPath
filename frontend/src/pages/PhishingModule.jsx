@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, AlertTriangle, Info } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useProgress } from '../context/ProgressContext';
+import VoiceButton from '../components/VoiceButton';
 
 const risks = [
   {
@@ -36,6 +38,7 @@ export default function PhishingModule() {
     risks.reduce((acc, risk) => ({ ...acc, [risk.id]: false }), {})
   );
   const [activeInfo, setActiveInfo] = useState(null);
+  const { markComplete } = useProgress();
 
   const handleRiskClick = (id) => {
     setFoundStatus(prev => ({ ...prev, [id]: true }));
@@ -50,6 +53,12 @@ export default function PhishingModule() {
 
   const foundCount = Object.values(foundStatus).filter(Boolean).length;
   const isComplete = foundCount === risks.length;
+
+  React.useEffect(() => {
+    if (isComplete) {
+      markComplete('phishing');
+    }
+  }, [isComplete, markComplete]);
 
   return (
     <div className="animate-fade-in" style={{ padding: '0 1rem' }}>

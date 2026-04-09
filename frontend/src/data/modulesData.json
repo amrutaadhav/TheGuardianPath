@@ -1,0 +1,3860 @@
+{
+  "phishing": [
+    {
+      "id": 1,
+      "sender": "security@chasey.com",
+      "subject": "URGENT: Account Locked",
+      "greeting": "Dear Customer,",
+      "body": "Your account has been locked due to suspicious activity. Please verify your identity immediately.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "security@chasey.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear Customer,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "sender": "admin@paypal-update-info.com",
+      "subject": "Your Invoice #9912",
+      "greeting": "Dear User,",
+      "body": "Your recent payment of $499.99 was successful. If you did not make this, click the link to cancel.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "admin@paypal-update-info.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear User,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "sender": "netflix-billing@notflix.com",
+      "subject": "Action Required: Payment Failed",
+      "greeting": "Valued Member,",
+      "body": "We tried to deliver your package but nobody was home. Please pay the $1.99 redelivery fee.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "netflix-billing@notflix.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Valued Member,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "sender": "irs.gov.alert@gmail.com",
+      "subject": "You have a new secure message",
+      "greeting": "Hello,",
+      "body": "Your tax return is ready. Claim your refund by clicking the button below.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "irs.gov.alert@gmail.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Hello,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "sender": "delivery@usps-track-package.net",
+      "subject": "Final Notice before Closure",
+      "greeting": "Dear [Email Address],",
+      "body": "Your subscription has expired. Update your billing details now to avoid losing access.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "delivery@usps-track-package.net",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear [Email Address],",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "sender": "security@chasey.com",
+      "subject": "URGENT: Account Locked",
+      "greeting": "Dear Customer,",
+      "body": "Your account has been locked due to suspicious activity. Please verify your identity immediately.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "security@chasey.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear Customer,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "sender": "admin@paypal-update-info.com",
+      "subject": "Your Invoice #9912",
+      "greeting": "Dear User,",
+      "body": "Your recent payment of $499.99 was successful. If you did not make this, click the link to cancel.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "admin@paypal-update-info.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear User,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "sender": "netflix-billing@notflix.com",
+      "subject": "Action Required: Payment Failed",
+      "greeting": "Valued Member,",
+      "body": "We tried to deliver your package but nobody was home. Please pay the $1.99 redelivery fee.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "netflix-billing@notflix.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Valued Member,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "sender": "irs.gov.alert@gmail.com",
+      "subject": "You have a new secure message",
+      "greeting": "Hello,",
+      "body": "Your tax return is ready. Claim your refund by clicking the button below.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "irs.gov.alert@gmail.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Hello,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "sender": "delivery@usps-track-package.net",
+      "subject": "Final Notice before Closure",
+      "greeting": "Dear [Email Address],",
+      "body": "Your subscription has expired. Update your billing details now to avoid losing access.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "delivery@usps-track-package.net",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear [Email Address],",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "sender": "security@chasey.com",
+      "subject": "URGENT: Account Locked",
+      "greeting": "Dear Customer,",
+      "body": "Your account has been locked due to suspicious activity. Please verify your identity immediately.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "security@chasey.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear Customer,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "sender": "admin@paypal-update-info.com",
+      "subject": "Your Invoice #9912",
+      "greeting": "Dear User,",
+      "body": "Your recent payment of $499.99 was successful. If you did not make this, click the link to cancel.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "admin@paypal-update-info.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear User,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "sender": "netflix-billing@notflix.com",
+      "subject": "Action Required: Payment Failed",
+      "greeting": "Valued Member,",
+      "body": "We tried to deliver your package but nobody was home. Please pay the $1.99 redelivery fee.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "netflix-billing@notflix.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Valued Member,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "sender": "irs.gov.alert@gmail.com",
+      "subject": "You have a new secure message",
+      "greeting": "Hello,",
+      "body": "Your tax return is ready. Claim your refund by clicking the button below.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "irs.gov.alert@gmail.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Hello,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "sender": "delivery@usps-track-package.net",
+      "subject": "Final Notice before Closure",
+      "greeting": "Dear [Email Address],",
+      "body": "Your subscription has expired. Update your billing details now to avoid losing access.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "delivery@usps-track-package.net",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear [Email Address],",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "sender": "security@chasey.com",
+      "subject": "URGENT: Account Locked",
+      "greeting": "Dear Customer,",
+      "body": "Your account has been locked due to suspicious activity. Please verify your identity immediately.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "security@chasey.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear Customer,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "sender": "admin@paypal-update-info.com",
+      "subject": "Your Invoice #9912",
+      "greeting": "Dear User,",
+      "body": "Your recent payment of $499.99 was successful. If you did not make this, click the link to cancel.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "admin@paypal-update-info.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear User,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "sender": "netflix-billing@notflix.com",
+      "subject": "Action Required: Payment Failed",
+      "greeting": "Valued Member,",
+      "body": "We tried to deliver your package but nobody was home. Please pay the $1.99 redelivery fee.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "netflix-billing@notflix.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Valued Member,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "sender": "irs.gov.alert@gmail.com",
+      "subject": "You have a new secure message",
+      "greeting": "Hello,",
+      "body": "Your tax return is ready. Claim your refund by clicking the button below.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "irs.gov.alert@gmail.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Hello,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "sender": "delivery@usps-track-package.net",
+      "subject": "Final Notice before Closure",
+      "greeting": "Dear [Email Address],",
+      "body": "Your subscription has expired. Update your billing details now to avoid losing access.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "delivery@usps-track-package.net",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear [Email Address],",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "sender": "security@chasey.com",
+      "subject": "URGENT: Account Locked",
+      "greeting": "Dear Customer,",
+      "body": "Your account has been locked due to suspicious activity. Please verify your identity immediately.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "security@chasey.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear Customer,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "sender": "admin@paypal-update-info.com",
+      "subject": "Your Invoice #9912",
+      "greeting": "Dear User,",
+      "body": "Your recent payment of $499.99 was successful. If you did not make this, click the link to cancel.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "admin@paypal-update-info.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear User,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "sender": "netflix-billing@notflix.com",
+      "subject": "Action Required: Payment Failed",
+      "greeting": "Valued Member,",
+      "body": "We tried to deliver your package but nobody was home. Please pay the $1.99 redelivery fee.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "netflix-billing@notflix.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Valued Member,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "sender": "irs.gov.alert@gmail.com",
+      "subject": "You have a new secure message",
+      "greeting": "Hello,",
+      "body": "Your tax return is ready. Claim your refund by clicking the button below.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "irs.gov.alert@gmail.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Hello,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "sender": "delivery@usps-track-package.net",
+      "subject": "Final Notice before Closure",
+      "greeting": "Dear [Email Address],",
+      "body": "Your subscription has expired. Update your billing details now to avoid losing access.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "delivery@usps-track-package.net",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear [Email Address],",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "sender": "security@chasey.com",
+      "subject": "URGENT: Account Locked",
+      "greeting": "Dear Customer,",
+      "body": "Your account has been locked due to suspicious activity. Please verify your identity immediately.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "security@chasey.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear Customer,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "sender": "admin@paypal-update-info.com",
+      "subject": "Your Invoice #9912",
+      "greeting": "Dear User,",
+      "body": "Your recent payment of $499.99 was successful. If you did not make this, click the link to cancel.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "admin@paypal-update-info.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear User,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "sender": "netflix-billing@notflix.com",
+      "subject": "Action Required: Payment Failed",
+      "greeting": "Valued Member,",
+      "body": "We tried to deliver your package but nobody was home. Please pay the $1.99 redelivery fee.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "netflix-billing@notflix.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Valued Member,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "sender": "irs.gov.alert@gmail.com",
+      "subject": "You have a new secure message",
+      "greeting": "Hello,",
+      "body": "Your tax return is ready. Claim your refund by clicking the button below.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "irs.gov.alert@gmail.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Hello,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "sender": "delivery@usps-track-package.net",
+      "subject": "Final Notice before Closure",
+      "greeting": "Dear [Email Address],",
+      "body": "Your subscription has expired. Update your billing details now to avoid losing access.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "delivery@usps-track-package.net",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear [Email Address],",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "sender": "security@chasey.com",
+      "subject": "URGENT: Account Locked",
+      "greeting": "Dear Customer,",
+      "body": "Your account has been locked due to suspicious activity. Please verify your identity immediately.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "security@chasey.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear Customer,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "sender": "admin@paypal-update-info.com",
+      "subject": "Your Invoice #9912",
+      "greeting": "Dear User,",
+      "body": "Your recent payment of $499.99 was successful. If you did not make this, click the link to cancel.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "admin@paypal-update-info.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear User,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "sender": "netflix-billing@notflix.com",
+      "subject": "Action Required: Payment Failed",
+      "greeting": "Valued Member,",
+      "body": "We tried to deliver your package but nobody was home. Please pay the $1.99 redelivery fee.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "netflix-billing@notflix.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Valued Member,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "sender": "irs.gov.alert@gmail.com",
+      "subject": "You have a new secure message",
+      "greeting": "Hello,",
+      "body": "Your tax return is ready. Claim your refund by clicking the button below.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "irs.gov.alert@gmail.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Hello,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "sender": "delivery@usps-track-package.net",
+      "subject": "Final Notice before Closure",
+      "greeting": "Dear [Email Address],",
+      "body": "Your subscription has expired. Update your billing details now to avoid losing access.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "delivery@usps-track-package.net",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear [Email Address],",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "sender": "security@chasey.com",
+      "subject": "URGENT: Account Locked",
+      "greeting": "Dear Customer,",
+      "body": "Your account has been locked due to suspicious activity. Please verify your identity immediately.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "security@chasey.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear Customer,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "sender": "admin@paypal-update-info.com",
+      "subject": "Your Invoice #9912",
+      "greeting": "Dear User,",
+      "body": "Your recent payment of $499.99 was successful. If you did not make this, click the link to cancel.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "admin@paypal-update-info.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear User,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "sender": "netflix-billing@notflix.com",
+      "subject": "Action Required: Payment Failed",
+      "greeting": "Valued Member,",
+      "body": "We tried to deliver your package but nobody was home. Please pay the $1.99 redelivery fee.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "netflix-billing@notflix.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Valued Member,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "sender": "irs.gov.alert@gmail.com",
+      "subject": "You have a new secure message",
+      "greeting": "Hello,",
+      "body": "Your tax return is ready. Claim your refund by clicking the button below.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "irs.gov.alert@gmail.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Hello,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "sender": "delivery@usps-track-package.net",
+      "subject": "Final Notice before Closure",
+      "greeting": "Dear [Email Address],",
+      "body": "Your subscription has expired. Update your billing details now to avoid losing access.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "delivery@usps-track-package.net",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear [Email Address],",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "sender": "security@chasey.com",
+      "subject": "URGENT: Account Locked",
+      "greeting": "Dear Customer,",
+      "body": "Your account has been locked due to suspicious activity. Please verify your identity immediately.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "security@chasey.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear Customer,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "sender": "admin@paypal-update-info.com",
+      "subject": "Your Invoice #9912",
+      "greeting": "Dear User,",
+      "body": "Your recent payment of $499.99 was successful. If you did not make this, click the link to cancel.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "admin@paypal-update-info.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear User,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "sender": "netflix-billing@notflix.com",
+      "subject": "Action Required: Payment Failed",
+      "greeting": "Valued Member,",
+      "body": "We tried to deliver your package but nobody was home. Please pay the $1.99 redelivery fee.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "netflix-billing@notflix.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Valued Member,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "sender": "irs.gov.alert@gmail.com",
+      "subject": "You have a new secure message",
+      "greeting": "Hello,",
+      "body": "Your tax return is ready. Claim your refund by clicking the button below.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "irs.gov.alert@gmail.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Hello,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "sender": "delivery@usps-track-package.net",
+      "subject": "Final Notice before Closure",
+      "greeting": "Dear [Email Address],",
+      "body": "Your subscription has expired. Update your billing details now to avoid losing access.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "delivery@usps-track-package.net",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear [Email Address],",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "sender": "security@chasey.com",
+      "subject": "URGENT: Account Locked",
+      "greeting": "Dear Customer,",
+      "body": "Your account has been locked due to suspicious activity. Please verify your identity immediately.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "security@chasey.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear Customer,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "sender": "admin@paypal-update-info.com",
+      "subject": "Your Invoice #9912",
+      "greeting": "Dear User,",
+      "body": "Your recent payment of $499.99 was successful. If you did not make this, click the link to cancel.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "admin@paypal-update-info.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear User,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "sender": "netflix-billing@notflix.com",
+      "subject": "Action Required: Payment Failed",
+      "greeting": "Valued Member,",
+      "body": "We tried to deliver your package but nobody was home. Please pay the $1.99 redelivery fee.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "netflix-billing@notflix.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Valued Member,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "sender": "irs.gov.alert@gmail.com",
+      "subject": "You have a new secure message",
+      "greeting": "Hello,",
+      "body": "Your tax return is ready. Claim your refund by clicking the button below.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "irs.gov.alert@gmail.com",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Hello,",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "sender": "delivery@usps-track-package.net",
+      "subject": "Final Notice before Closure",
+      "greeting": "Dear [Email Address],",
+      "body": "Your subscription has expired. Update your billing details now to avoid losing access.",
+      "risks": [
+        {
+          "id": "sender",
+          "text": "delivery@usps-track-package.net",
+          "explanation": "Suspicious sender email domain.",
+          "found": false
+        },
+        {
+          "id": "greeting",
+          "text": "Dear [Email Address],",
+          "explanation": "Generic greeting instead of your name.",
+          "found": false
+        },
+        {
+          "id": "link",
+          "text": "Click Here",
+          "explanation": "A dangerous button hiding a fake URL.",
+          "found": false
+        }
+      ]
+    }
+  ],
+  "redflags": [
+    {
+      "id": 1,
+      "type": "sms",
+      "scenario": "Scenario 1: WhatsApp message.",
+      "message": "You won a gift card!",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "email",
+      "scenario": "Scenario 2: SMS message.",
+      "message": "Your grandson is in jail and needs bail money instantly.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "sms",
+      "scenario": "Scenario 3: Email message.",
+      "message": "An unfamiliar number sends a link to a funny video.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "email",
+      "scenario": "Scenario 4: Facebook message.",
+      "message": "Your bank asks you to reply with your PIN.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "sms",
+      "scenario": "Scenario 5: Instagram message.",
+      "message": "A charity asks for donations via Apple Gift Cards.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "email",
+      "scenario": "Scenario 6: WhatsApp message.",
+      "message": "You won a gift card!",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "sms",
+      "scenario": "Scenario 7: SMS message.",
+      "message": "Your grandson is in jail and needs bail money instantly.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "email",
+      "scenario": "Scenario 8: Email message.",
+      "message": "An unfamiliar number sends a link to a funny video.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "sms",
+      "scenario": "Scenario 9: Facebook message.",
+      "message": "Your bank asks you to reply with your PIN.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "email",
+      "scenario": "Scenario 10: Instagram message.",
+      "message": "A charity asks for donations via Apple Gift Cards.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "type": "sms",
+      "scenario": "Scenario 11: WhatsApp message.",
+      "message": "You won a gift card!",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "type": "email",
+      "scenario": "Scenario 12: SMS message.",
+      "message": "Your grandson is in jail and needs bail money instantly.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "type": "sms",
+      "scenario": "Scenario 13: Email message.",
+      "message": "An unfamiliar number sends a link to a funny video.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "type": "email",
+      "scenario": "Scenario 14: Facebook message.",
+      "message": "Your bank asks you to reply with your PIN.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "type": "sms",
+      "scenario": "Scenario 15: Instagram message.",
+      "message": "A charity asks for donations via Apple Gift Cards.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "type": "email",
+      "scenario": "Scenario 16: WhatsApp message.",
+      "message": "You won a gift card!",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "type": "sms",
+      "scenario": "Scenario 17: SMS message.",
+      "message": "Your grandson is in jail and needs bail money instantly.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "type": "email",
+      "scenario": "Scenario 18: Email message.",
+      "message": "An unfamiliar number sends a link to a funny video.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "type": "sms",
+      "scenario": "Scenario 19: Facebook message.",
+      "message": "Your bank asks you to reply with your PIN.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "type": "email",
+      "scenario": "Scenario 20: Instagram message.",
+      "message": "A charity asks for donations via Apple Gift Cards.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "type": "sms",
+      "scenario": "Scenario 21: WhatsApp message.",
+      "message": "You won a gift card!",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "type": "email",
+      "scenario": "Scenario 22: SMS message.",
+      "message": "Your grandson is in jail and needs bail money instantly.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "type": "sms",
+      "scenario": "Scenario 23: Email message.",
+      "message": "An unfamiliar number sends a link to a funny video.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "type": "email",
+      "scenario": "Scenario 24: Facebook message.",
+      "message": "Your bank asks you to reply with your PIN.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "type": "sms",
+      "scenario": "Scenario 25: Instagram message.",
+      "message": "A charity asks for donations via Apple Gift Cards.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "type": "email",
+      "scenario": "Scenario 26: WhatsApp message.",
+      "message": "You won a gift card!",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "type": "sms",
+      "scenario": "Scenario 27: SMS message.",
+      "message": "Your grandson is in jail and needs bail money instantly.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "type": "email",
+      "scenario": "Scenario 28: Email message.",
+      "message": "An unfamiliar number sends a link to a funny video.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "type": "sms",
+      "scenario": "Scenario 29: Facebook message.",
+      "message": "Your bank asks you to reply with your PIN.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "type": "email",
+      "scenario": "Scenario 30: Instagram message.",
+      "message": "A charity asks for donations via Apple Gift Cards.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "type": "sms",
+      "scenario": "Scenario 31: WhatsApp message.",
+      "message": "You won a gift card!",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "type": "email",
+      "scenario": "Scenario 32: SMS message.",
+      "message": "Your grandson is in jail and needs bail money instantly.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "type": "sms",
+      "scenario": "Scenario 33: Email message.",
+      "message": "An unfamiliar number sends a link to a funny video.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "type": "email",
+      "scenario": "Scenario 34: Facebook message.",
+      "message": "Your bank asks you to reply with your PIN.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "type": "sms",
+      "scenario": "Scenario 35: Instagram message.",
+      "message": "A charity asks for donations via Apple Gift Cards.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "type": "email",
+      "scenario": "Scenario 36: WhatsApp message.",
+      "message": "You won a gift card!",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "type": "sms",
+      "scenario": "Scenario 37: SMS message.",
+      "message": "Your grandson is in jail and needs bail money instantly.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "type": "email",
+      "scenario": "Scenario 38: Email message.",
+      "message": "An unfamiliar number sends a link to a funny video.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "type": "sms",
+      "scenario": "Scenario 39: Facebook message.",
+      "message": "Your bank asks you to reply with your PIN.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "type": "email",
+      "scenario": "Scenario 40: Instagram message.",
+      "message": "A charity asks for donations via Apple Gift Cards.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "type": "sms",
+      "scenario": "Scenario 41: WhatsApp message.",
+      "message": "You won a gift card!",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "type": "email",
+      "scenario": "Scenario 42: SMS message.",
+      "message": "Your grandson is in jail and needs bail money instantly.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "type": "sms",
+      "scenario": "Scenario 43: Email message.",
+      "message": "An unfamiliar number sends a link to a funny video.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "type": "email",
+      "scenario": "Scenario 44: Facebook message.",
+      "message": "Your bank asks you to reply with your PIN.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "type": "sms",
+      "scenario": "Scenario 45: Instagram message.",
+      "message": "A charity asks for donations via Apple Gift Cards.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "type": "email",
+      "scenario": "Scenario 46: WhatsApp message.",
+      "message": "You won a gift card!",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "type": "sms",
+      "scenario": "Scenario 47: SMS message.",
+      "message": "Your grandson is in jail and needs bail money instantly.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "type": "email",
+      "scenario": "Scenario 48: Email message.",
+      "message": "An unfamiliar number sends a link to a funny video.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "type": "sms",
+      "scenario": "Scenario 49: Facebook message.",
+      "message": "Your bank asks you to reply with your PIN.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "type": "email",
+      "scenario": "Scenario 50: Instagram message.",
+      "message": "A charity asks for donations via Apple Gift Cards.",
+      "question": "What is the biggest red flag here?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It's asking for immediate money/info.",
+          "isCorrect": true,
+          "explanation": "Correct! Scammers create panic to force you to surrender cash or info."
+        },
+        {
+          "id": "b",
+          "text": "It looks totally normal.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "It came on a Tuesday.",
+          "isCorrect": false
+        }
+      ]
+    }
+  ],
+  "securepin": [
+    {
+      "id": 1,
+      "pin": "123456",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 2,
+      "pin": "304812",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 3,
+      "pin": "111111",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 4,
+      "pin": "562912",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 5,
+      "pin": "258025",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 6,
+      "pin": "749281",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 7,
+      "pin": "000000",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 8,
+      "pin": "812049",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 9,
+      "pin": "987654",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 10,
+      "pin": "409183",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 11,
+      "pin": "123456",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 12,
+      "pin": "304812",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 13,
+      "pin": "111111",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 14,
+      "pin": "562912",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 15,
+      "pin": "258025",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 16,
+      "pin": "749281",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 17,
+      "pin": "000000",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 18,
+      "pin": "812049",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 19,
+      "pin": "987654",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 20,
+      "pin": "409183",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 21,
+      "pin": "123456",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 22,
+      "pin": "304812",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 23,
+      "pin": "111111",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 24,
+      "pin": "562912",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 25,
+      "pin": "258025",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 26,
+      "pin": "749281",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 27,
+      "pin": "000000",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 28,
+      "pin": "812049",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 29,
+      "pin": "987654",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 30,
+      "pin": "409183",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 31,
+      "pin": "123456",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 32,
+      "pin": "304812",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 33,
+      "pin": "111111",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 34,
+      "pin": "562912",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 35,
+      "pin": "258025",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 36,
+      "pin": "749281",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 37,
+      "pin": "000000",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 38,
+      "pin": "812049",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 39,
+      "pin": "987654",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 40,
+      "pin": "409183",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 41,
+      "pin": "123456",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 42,
+      "pin": "304812",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 43,
+      "pin": "111111",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 44,
+      "pin": "562912",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 45,
+      "pin": "258025",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 46,
+      "pin": "749281",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 47,
+      "pin": "000000",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 48,
+      "pin": "812049",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    },
+    {
+      "id": 49,
+      "pin": "987654",
+      "isSecure": false,
+      "explanation": "This PIN is too common. Scammers try sequences like 123456 or repeated numbers."
+    },
+    {
+      "id": 50,
+      "pin": "409183",
+      "isSecure": true,
+      "explanation": "This is a strong, random PIN."
+    }
+  ],
+  "digitalid": [
+    {
+      "id": 1,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "scenario": "Submitting your ID securely on an official ending in .gov website.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": true,
+          "explanation": "Correct! Official government portals are secure."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": false,
+          "explanation": "Incorrect! Official portals are designed for secure sharing."
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "scenario": "Uploading your driver's license to a public Facebook group.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "scenario": "Sending your passport photo via unencrypted email.",
+      "question": "Is this action safe for your Digital Identity?",
+      "options": [
+        {
+          "id": "safe",
+          "text": "Safe",
+          "isCorrect": false,
+          "explanation": "Incorrect! This exposes your identity to thieves."
+        },
+        {
+          "id": "unsafe",
+          "text": "Unsafe",
+          "isCorrect": true,
+          "explanation": "Correct! Never share ID over public or unencrypted channels."
+        }
+      ]
+    }
+  ]
+}

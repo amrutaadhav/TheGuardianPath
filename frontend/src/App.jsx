@@ -1,16 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { ShieldCheck, User, Globe } from 'lucide-react';
+import { ShieldCheck, User, Globe, LogOut } from 'lucide-react';
 import Dashboard from './pages/Dashboard';
 import PhishingModule from './pages/PhishingModule';
 import RedFlagDetector from './pages/RedFlagDetector';
 import SecurePasswordModule from './pages/SecurePasswordModule';
 import DigitalIdModule from './pages/DigitalIdModule';
 import Footer from './components/Footer';
+import AuthPage from './pages/AuthPage';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
+import { AuthProvider, useAuth } from './context/AuthContext';
+import { ProgressProvider } from './context/ProgressContext';
 
 function MainApp() {
   const { t, toggleLanguage, lang } = useLanguage();
+  const { token, logout, user } = useAuth();
 
   return (
     <Router>
@@ -49,30 +53,41 @@ function MainApp() {
             >
               <Globe size={24} /> {lang === 'en' ? 'मराठी' : 'English'}
             </button>
-            <Link to="/" style={{ 
-              fontSize: '1.4rem', fontWeight: 'bold', color: '#FFFFFF', textDecoration: 'none',
-              padding: '0.75rem 1.5rem', borderRadius: '12px', background: 'rgba(255,255,255,0.1)',
-              border: '2px solid rgba(255,255,255,0.2)'
-            }}>
-              {t('dashboard')}
-            </Link>
-            <div style={{
-              background: 'rgba(255,255,255,0.1)', border: '2px solid rgba(255,255,255,0.2)', padding: '1rem', borderRadius: '50%',
-              display: 'flex', alignItems: 'center', justifyItems: 'center'
-            }}>
-              <User size={28} color="#FFFFFF" />
-            </div>
+            
+            {token && (
+              <>
+                <Link to="/" style={{ 
+                  fontSize: '1.4rem', fontWeight: 'bold', color: '#FFFFFF', textDecoration: 'none',
+                  padding: '0.75rem 1.5rem', borderRadius: '12px', background: 'rgba(255,255,255,0.1)',
+                  border: '2px solid rgba(255,255,255,0.2)'
+                }}>
+                  {t('dashboard')}
+                </Link>
+                
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: 'rgba(255,255,255,0.1)', padding: '0.75rem 1.5rem', borderRadius: '12px', border: '2px solid rgba(255,255,255,0.2)' }}>
+                  <User size={24} color="#FFFFFF" />
+                  <span style={{ color: 'white', fontWeight: 'bold', fontSize: '1.4rem' }}>{user?.username}</span>
+                  <button onClick={logout} style={{ background: 'none', border: 'none', color: '#FCA5A5', cursor: 'pointer', marginLeft: '0.5rem' }} title="Log out">
+                    <LogOut size={24} />
+                  </button>
+                </div>
+              </>
+            )}
           </div>
         </nav>
         
         <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/module/phishing" element={<PhishingModule />} />
-            <Route path="/module/redflags" element={<RedFlagDetector />} />
-            <Route path="/module/secure-pin" element={<SecurePasswordModule />} />
-            <Route path="/module/digital-id" element={<DigitalIdModule />} />
-          </Routes>
+          {!token ? (
+            <AuthPage />
+          ) : (
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/module/phishing" element={<PhishingModule />} />
+              <Route path="/module/redflags" element={<RedFlagDetector />} />
+              <Route path="/module/secure-pin" element={<SecurePasswordModule />} />
+              <Route path="/module/digital-id" element={<DigitalIdModule />} />
+            </Routes>
+          )}
         </main>
 
         <Footer />
@@ -84,7 +99,11 @@ function MainApp() {
 export default function App() {
   return (
     <LanguageProvider>
-      <MainApp />
+      <AuthProvider>
+        <ProgressProvider>
+          <MainApp />
+        </ProgressProvider>
+      </AuthProvider>
     </LanguageProvider>
   );
 }

@@ -2,58 +2,29 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, AlertTriangle, CheckCircle, Smartphone, Mail, XCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useProgress } from '../context/ProgressContext';
+import VoiceButton from '../components/VoiceButton';
 
-const quizData = [
-  {
-    id: 1,
-    type: 'sms',
-    icon: <Smartphone size={40} className="text-primary" />,
-    scenario: "You receive a text message on your phone from an unknown number.",
-    message: "USPS: Your package cannot be delivered due to wrong address. Please click here to update your info and pay the $1.20 redelivery fee: http://usps-package-update-alerts.com",
-    question: "What is the biggest 'Red Flag' that shows this is a scam?",
-    options: [
-      { id: 'a', text: "The post office never makes mistakes.", isCorrect: false },
-      { id: 'b', text: "The link address is very long and weird.", isCorrect: true, explanation: "Correct! The link doesn't go to the real 'USPS.com'. Scammers make fake websites that look real to steal your credit card." },
-      { id: 'c', text: "It is asking for too little money.", isCorrect: false }
-    ]
-  },
-  {
-    id: 2,
-    type: 'email',
-    icon: <Mail size={40} className="text-warning" />,
-    scenario: "You get an email that claims to be from the IRS (Tax Office).",
-    message: "FINAL WARNING: You owe $850 in back taxes. If you do not pay immediately using Apple Gift Cards, the local police will come to arrest you in 2 hours.",
-    question: "Why is this email definitely a scam?",
-    options: [
-      { id: 'a', text: "The government does not accept gift cards as payment.", isCorrect: true, explanation: "Correct! The IRS or police will never ask you to pay fines with gift cards. They also do not send threatening emails to arrest you." },
-      { id: 'b', text: "The amount ($850) is too low.", isCorrect: false },
-      { id: 'c', text: "The email doesn't have a picture.", isCorrect: false }
-    ]
-  },
-  {
-    id: 3,
-    type: 'sms',
-    icon: <Smartphone size={40} className="text-danger" />,
-    scenario: "A text message claims your bank account is locked.",
-    message: "Wells Fargo Alert: Suspicious activity detected. Your account is LOCKED. Reply with your PIN number to unlock it immediately.",
-    question: "What is the scammer trying to do here?",
-    options: [
-      { id: 'a', text: "They are trying to help you secure your account.", isCorrect: false },
-      { id: 'b', text: "They want you to type back in capital letters.", isCorrect: false },
-      { id: 'c', text: "They want you to give away your secret PIN.", isCorrect: true, explanation: "Correct! A real bank will NEVER text or call you to ask for your PIN or password. If you ever get a message like this, call the bank directly using the number on the back of your card." }
-    ]
-  }
-];
+// Dynamically import the 50 generated text scenarios!
+import modulesData from '../data/modulesData.json';
+
+const quizDataRaw = modulesData.redflags;
 
 export default function RedFlagDetector() {
   const navigate = useNavigate();
+  // We'll let them play through the 50 generated quizzes!
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isAnswerRevealed, setIsAnswerRevealed] = useState(false);
   const [score, setScore] = useState(0);
+  const { markComplete } = useProgress();
 
-  const currentQuiz = quizData[currentQuestionIndex];
-  const isFinished = currentQuestionIndex >= quizData.length;
+  const currentQuiz = quizDataRaw[currentQuestionIndex];
+  const isFinished = currentQuestionIndex >= quizDataRaw.length;
+
+  React.useEffect(() => {
+    if (isFinished) markComplete('redflags');
+  }, [isFinished, markComplete]);
 
   const handleSelect = (option) => {
     if (isAnswerRevealed) return; // Prevent clicking again
@@ -77,9 +48,9 @@ export default function RedFlagDetector() {
         <div className="glass-panel" style={{ textAlign: 'center', background: '#F8FAFC' }}>
           <CheckCircle size={100} className="text-success" style={{ margin: '0 auto 2rem auto' }} />
           <h2 style={{ fontSize: '3.5rem', marginBottom: '1rem', color: 'var(--accent-success)' }}>Quiz Complete!</h2>
-          <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>You got {score} out of {quizData.length} correct.</p>
+          <p style={{ fontSize: '2rem', fontWeight: 'bold' }}>You got {score} out of {quizDataRaw.length} correct.</p>
           <p style={{ fontSize: '1.6rem', marginBottom: '3rem' }}>
-            Remember: if a message creates panic, asks for personal info, or tells you to click a strange link, it is a Red Flag!
+            Incredible! You just practiced identifying 50 different Real-World Red Flags.
           </p>
           <button className="btn-primary" style={{ padding: '1.5rem 3rem', fontSize: '1.8rem' }} onClick={() => navigate('/')}>
             Return to Dashboard
@@ -96,18 +67,24 @@ export default function RedFlagDetector() {
       </button>
 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-        <h1 style={{ fontSize: '2.5rem', margin: 0 }}>The "Red Flag" Quiz</h1>
+        <h1 style={{ fontSize: '2.5rem', margin: 0, display: 'flex', alignItems: 'center' }}>
+          The "Red Flag" Quiz
+          <VoiceButton text="The Red Flag Quiz" />
+        </h1>
         <div style={{ fontSize: '1.5rem', fontWeight: 'bold', background: '#E2E8F0', padding: '0.5rem 1rem', borderRadius: '12px' }}>
-          Question {currentQuestionIndex + 1} of {quizData.length}
+          Question {currentQuestionIndex + 1} of {quizDataRaw.length}
         </div>
       </div>
 
       <div className="glass-panel" style={{ border: '4px solid var(--accent-primary)', marginBottom: '3rem' }}>
         
         <div style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start', marginBottom: '2rem' }}>
-          {currentQuiz.icon}
+          {currentQuiz.type === 'sms' ? <Smartphone size={40} className="text-primary"/> : <Mail size={40} className="text-warning"/>}
           <div>
-            <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>{currentQuiz.scenario}</h2>
+            <h2 style={{ fontSize: '2rem', marginBottom: '1rem', display: 'flex', alignItems: 'center' }}>
+              {currentQuiz.scenario}
+              <VoiceButton text={currentQuiz.scenario} />
+            </h2>
             <div style={{ 
               background: currentQuiz.type === 'sms' ? '#DCF8C6' : '#F1F5F9', // Whatsapp green for SMS
               padding: '2rem',
@@ -175,8 +152,9 @@ export default function RedFlagDetector() {
                 <h4 style={{ fontSize: '2rem', marginBottom: '1rem', color: selectedAnswer.isCorrect ? 'var(--accent-success-hover)' : 'var(--accent-danger-hover)' }}>
                   {selectedAnswer.isCorrect ? "You Got It Right! 🎉" : "Not Quite. Let's learn why:"}
                 </h4>
-                <p style={{ fontSize: '1.6rem', fontWeight: 'bold', margin: 0, color: '#000' }}>
-                  {currentQuiz.options.find(opt => opt.isCorrect).explanation.replace('Correct! ', '')}
+                <p style={{ fontSize: '1.6rem', fontWeight: 'bold', margin: 0, color: '#000', display: 'flex', alignItems: 'center' }}>
+                  {currentQuiz.options.find(opt => opt.isCorrect).explanation}
+                  <VoiceButton text={currentQuiz.options.find(opt => opt.isCorrect).explanation} />
                 </p>
 
                 <button 
@@ -184,7 +162,7 @@ export default function RedFlagDetector() {
                   style={{ marginTop: '2rem', padding: '1.5rem 3rem', fontSize: '1.5rem' }}
                   onClick={handleNext}
                 >
-                  Go to Next Question
+                  Go to Next Practice Scenario
                 </button>
               </div>
             </motion.div>

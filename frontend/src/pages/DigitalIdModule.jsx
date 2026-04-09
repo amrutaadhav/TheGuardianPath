@@ -2,11 +2,18 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Camera, FileText, CheckCircle, Verified, ShieldAlert } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useProgress } from '../context/ProgressContext';
+import VoiceButton from '../components/VoiceButton';
 
 export default function DigitalIdModule() {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [isChecked, setIsChecked] = useState(false);
+  const { markComplete } = useProgress();
+
+  React.useEffect(() => {
+    if (step === 3) markComplete('digitalid');
+  }, [step, markComplete]);
 
   return (
     <div className="animate-fade-in" style={{ padding: '0 1rem', paddingBottom: '3rem' }}>

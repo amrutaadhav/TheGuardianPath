@@ -2,12 +2,19 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, ShieldAlert, Lock, Smartphone } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useProgress } from '../context/ProgressContext';
+import VoiceButton from '../components/VoiceButton';
 
 export default function SecurePasswordModule() {
   const navigate = useNavigate();
   const [pin, setPin] = useState('');
   const [step, setStep] = useState(1);
   const [feedback, setFeedback] = useState(null);
+  const { markComplete } = useProgress();
+
+  React.useEffect(() => {
+    if (step === 2) markComplete('securepin');
+  }, [step, markComplete]);
 
   const weakPins = ['123456', '000000', '111111', '654321', '987654', '121212'];
 

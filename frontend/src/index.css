@@ -1,30 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --bg-color-main: #FFFFFF; 
+  /* Ultra-Premium Color Palette */
+  --bg-color-main: #F4F7FB; 
   --bg-color-panel: #FFFFFF;
-  --text-main: #000000;
-  --text-secondary: #333333;
+  --text-main: #0F172A;
+  --text-secondary: #475569;
   --text-muted: #555555;
   
-  --accent-primary: #1D4ED8; /* Deeper blue for higher contrast */
-  --accent-primary-hover: #1E3A8A;
+  --accent-primary: #2563EB; /* Deep, professional blue */
+  --accent-primary-hover: #1D4ED8;
   
-  --accent-success: #047857; /* Deep green */
-  --accent-success-hover: #065F46;
+  --accent-success: #059669; /* Emerald rather than bright green */
+  --accent-success-hover: #047857;
   
-  --accent-danger: #B91C1C; /* Deep red */
-  --accent-danger-hover: #991B1B;
+  --accent-danger: #DC2626; /* Deep red */
+  --accent-danger-hover: #B91C1C;
 
   --accent-warning: #D97706;
   
-  --font-family: 'Outfit', sans-serif;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -37,7 +41,7 @@ body {
   background-position: center;
   color: var(--text-main);
   min-height: 100vh;
-  font-size: 110%; /* Increase base font size system-wide */
+  font-size: 100%; /* Slightly smaller, standard system font size */
   line-height: 1.6;
 }
 
@@ -71,7 +75,7 @@ p {
   color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 1.25rem;
-  font-size: 1.25rem; /* Massive base paragraph size */
+  font-size: 1.15rem; /* Reduced slightly for balance */
 }
 
 /* REFINED TAP TARGETS */
@@ -130,6 +134,10 @@ button, .btn {
   transform: translateY(-2px);
 }
 
+.btn-primary:active, .btn-secondary:active, .btn-success:active, .btn-danger:active {
+  transform: scale(0.98);
+}
+
 .glass-panel {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
@@ -175,17 +183,19 @@ button, .btn {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  border: 3px solid #CBD5E1; /* High contrast card borders */
-  padding: 2rem;
-  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Sleek glass frame */
+  padding: 2.5rem; /* More breathing room inside */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Premium soft shadow */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .module-card:hover, .module-card:focus-within {
-  border-color: var(--accent-primary);
-  box-shadow: 0 4px 0 var(--accent-primary); /* Harsh, obvious focus state */
-  transform: translateY(-4px);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15); /* Glowing blue lift effect */
+  border-color: rgba(59, 130, 246, 0.4);
 }
 
 .module-card .badge {
@@ -194,11 +204,18 @@ button, .btn {
   right: 1.5rem;
   background: #D1FAE5;
   color: var(--accent-success-hover);
-  padding: 0.5rem 1.25rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 800;
-  border: 2px solid var(--accent-success-hover);
+  padding: 1.25rem 2rem; /* Balanced, professional proportions */
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; 
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
 }
 
 .module-icon-wrap {

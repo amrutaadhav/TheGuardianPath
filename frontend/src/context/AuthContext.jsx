@@ -22,7 +22,8 @@ export function AuthProvider({ children }) {
   const register = async (username, password) => {
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/register', { username, password });
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const res = await axios.post(`${API_URL}/api/auth/register`, { username, password });
       setToken(res.data.token);
       setUser(res.data.user);
       setLoading(false);
@@ -36,7 +37,8 @@ export function AuthProvider({ children }) {
   const login = async (username, password) => {
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', { username, password });
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const res = await axios.post(`${API_URL}/api/auth/login`, { username, password });
       setToken(res.data.token);
       setUser(res.data.user);
       setLoading(false);

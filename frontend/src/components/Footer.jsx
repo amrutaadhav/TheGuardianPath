@@ -5,41 +5,38 @@ import { useLanguage } from '../context/LanguageContext';
 export default function Footer() {
   const { t } = useLanguage();
   return (
-    <footer style={{ 
-      background: '#0F172A', /* Deep Slate/Navy */
-      color: '#F8FAFC',
-      borderTop: '4px solid #3B82F6', /* Vibrant Blue Accent */
+    <footer style={{
+      background: '#232946', /* Happy Hues Dark */
+      color: '#fffffe',
+      borderTop: '4px solid #121629', /* Deep Stroke */
       padding: '2rem', /* Matches navbar side padding */
       width: '100%',
       boxSizing: 'border-box',
       marginTop: 'auto',
-      boxShadow: '0 -10px 40px rgba(0,0,0,0.15)'
+      boxShadow: '0 -10px 40px rgba(18, 22, 41, 0.5)'
     }}>
       <div style={{ width: '100%', margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: '2rem', justifyContent: 'space-between' }}>
-        
+
         <div style={{ flex: '1 1 300px' }}>
-          <h3 style={{ fontSize: '1.4rem', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', color: '#FFFFFF' }}>
-            <ShieldAlert size={24} color="#60A5FA" /> The Guardian Path
+          <h3 style={{ fontSize: '1.4rem', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', color: '#fffffe' }}>
+            <ShieldAlert size={24} color="#eebbc3" /> The Guardian Path
           </h3>
-          <p style={{ fontSize: '1.2rem', color: '#94A3B8', maxWidth: '400px', margin: 0 }}>
+          <p style={{ fontSize: '1.2rem', color: '#b8c1ec', maxWidth: '400px', margin: 0 }}>
             {t('safeSpace')}
           </p>
         </div>
 
         <div style={{ flex: '1 1 300px' }}>
-          <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', color: '#FFFFFF' }}>{t('helpNow')}</h4>
+          <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', color: '#fffffe' }}>{t('helpNow')}</h4>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-            <li style={{ fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#FFFFFF' }}>
-              <Phone size={18} color="#34D399" /> <strong>{t('nationalFraud')}</strong> 1-800-123-4567
-            </li>
-            <li style={{ fontSize: '1.1rem', color: '#94A3B8' }}>
+            <li style={{ fontSize: '1.2rem', color: '#b8c1ec' }}>
               {t('panicText')}
             </li>
           </ul>
         </div>
-        
+
       </div>
-      <div style={{ textAlign: 'center', marginTop: '2rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)', fontSize: '1rem', color: '#64748B' }}>
+      <div style={{ textAlign: 'center', marginTop: '2rem', paddingTop: '1rem', borderTop: '2px solid #121629', fontSize: '1rem', color: '#b8c1ec' }}>
         <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', margin: 0 }}>
           {t('builtWith')}
         </p>

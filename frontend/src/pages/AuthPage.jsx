@@ -40,34 +40,34 @@ export default function AuthPage() {
           flexWrap: 'wrap',
           width: '100%', 
           maxWidth: '1000px', 
-          background: '#FFFFFF',
+          background: 'var(--card-bg)',
           borderRadius: '30px',
           overflow: 'hidden',
-          boxShadow: '0 25px 50px -12px rgba(15, 23, 42, 0.25)',
-          border: '1px solid #E2E8F0'
+          boxShadow: '0 25px 50px -12px rgba(18, 22, 41, 0.25)',
+          border: '2px solid #121629'
         }}
       >
         {/* Left Side: Branding / Banner */}
         <div style={{ 
           flex: '1 1 400px', 
-          background: 'linear-gradient(135deg, #0F172A 0%, #1E40AF 100%)', 
+          background: 'linear-gradient(135deg, #121629 0%, #232946 100%)', 
           padding: '4rem 3rem', 
           display: 'flex', 
           flexDirection: 'column', 
           justifyContent: 'center',
-          color: 'white',
+          color: '#fffffe',
           position: 'relative',
           overflow: 'hidden'
         }}>
           {/* Decorative background circle */}
           <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '300px', height: '300px', borderRadius: '50%', background: 'rgba(59, 130, 246, 0.2)', filter: 'blur(40px)' }}></div>
           
-          <ShieldCheck size={80} color="#60A5FA" style={{ marginBottom: '2rem', position: 'relative', zIndex: 1 }} />
-          <h1 style={{ fontSize: '3.5rem', fontWeight: '800', marginBottom: '1rem', lineHeight: '1.2', position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <ShieldCheck size={80} color="var(--accent-primary)" style={{ marginBottom: '2rem', position: 'relative', zIndex: 1 }} />
+          <h1 style={{ fontSize: '3.5rem', fontWeight: '800', marginBottom: '1rem', lineHeight: '1.2', position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center', gap: '1rem', color: '#fffffe' }}>
             {t('loginTitle')}
             <VoiceButton text={t('loginTitle')} />
           </h1>
-          <p style={{ fontSize: '1.5rem', color: '#BFDBFE', fontWeight: '500', lineHeight: '1.6', position: 'relative', zIndex: 1 }}>
+          <p style={{ fontSize: '1.5rem', color: 'var(--text-secondary)', fontWeight: '500', lineHeight: '1.6', position: 'relative', zIndex: 1 }}>
             {t('safeSpace')} <VoiceButton text={t('safeSpace')} />
           </p>
         </div>
@@ -82,11 +82,11 @@ export default function AuthPage() {
         }}>
           
           <div style={{ marginBottom: '2rem' }}>
-            <h2 style={{ fontSize: '2.5rem', color: '#0F172A', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <h2 style={{ fontSize: '2.5rem', color: 'var(--card-text)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               {isLogin ? t('loginBtn') : t('signUpBtn')}
               <VoiceButton text={isLogin ? t('loginBtn') : t('signUpBtn')} />
             </h2>
-            <p style={{ fontSize: '1.3rem', color: '#64748B', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <p style={{ fontSize: '1.3rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               {t('loginSub')}
               <VoiceButton text={t('loginSub')} />
             </p>
@@ -107,24 +107,24 @@ export default function AuthPage() {
 
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
             <div>
-              <label style={{ fontSize: '1.3rem', fontWeight: '700', display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '0.75rem', color: '#334155', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                <User size={18} color="#3B82F6" /> {t('username')} <VoiceButton text={t('username')} />
+              <label style={{ fontSize: '1.3rem', fontWeight: '700', display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '0.75rem', color: 'var(--card-text)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                <User size={18} color="var(--accent-primary)" /> {t('username')} <VoiceButton text={t('username')} />
               </label>
               <input 
                 type="text" 
                 required
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                style={{ width: '100%', padding: '1.25rem 1.5rem', fontSize: '1.5rem', borderRadius: '12px', border: '2px solid #CBD5E1', outline: 'none', transition: 'border-color 0.2s', background: '#F8FAFC', color: '#0F172A' }} 
+                style={{ width: '100%', padding: '1.25rem 1.5rem', fontSize: '1.5rem', borderRadius: '12px', border: '2px solid #121629', outline: 'none', transition: 'border-color 0.2s', background: '#d4d8f0', color: '#232946' }} 
                 placeholder="e.g. John123"
-                onFocus={(e) => e.target.style.borderColor = '#2563EB'}
-                onBlur={(e) => e.target.style.borderColor = '#CBD5E1'}
+                onFocus={(e) => e.target.style.borderColor = 'var(--accent-primary)'}
+                onBlur={(e) => e.target.style.borderColor = '#121629'}
               />
             </div>
 
             <div>
-              <label style={{ fontSize: '1.3rem', fontWeight: '700', display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '0.75rem', color: '#334155', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                <Lock size={18} color="#3B82F6" /> {t('password')} <VoiceButton text={t('password')} />
+              <label style={{ fontSize: '1.3rem', fontWeight: '700', display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '0.75rem', color: 'var(--card-text)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                <Lock size={18} color="var(--accent-primary)" /> {t('password')} <VoiceButton text={t('password')} />
               </label>
               <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
                 <input 
@@ -132,10 +132,10 @@ export default function AuthPage() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  style={{ width: '100%', padding: '1.25rem 1.5rem', paddingRight: '4.5rem', fontSize: '1.5rem', borderRadius: '12px', border: '2px solid #CBD5E1', outline: 'none', transition: 'border-color 0.2s', background: '#F8FAFC', color: '#0F172A' }} 
+                  style={{ width: '100%', padding: '1.25rem 1.5rem', paddingRight: '4.5rem', fontSize: '1.5rem', borderRadius: '12px', border: '2px solid #121629', outline: 'none', transition: 'border-color 0.2s', background: '#d4d8f0', color: '#232946' }} 
                   placeholder="••••••••"
-                  onFocus={(e) => e.target.style.borderColor = '#2563EB'}
-                  onBlur={(e) => e.target.style.borderColor = '#CBD5E1'}
+                  onFocus={(e) => e.target.style.borderColor = 'var(--accent-primary)'}
+                  onBlur={(e) => e.target.style.borderColor = '#121629'}
                 />
                 <button
                   type="button"
@@ -148,16 +148,16 @@ export default function AuthPage() {
               </div>
             </div>
 
-            <button type="submit" className="btn-primary" disabled={loading} style={{ fontSize: '1.6rem', marginTop: '1rem', display: 'flex', justifyContent: 'center', background: '#2563EB', boxShadow: '0 4px 14px 0 rgba(37, 99, 235, 0.39)' }}>
+            <button type="submit" className="btn-primary" disabled={loading} style={{ fontSize: '1.6rem', marginTop: '1rem', display: 'flex', justifyContent: 'center' }}>
               <ArrowRightCircle size={24} /> {isLogin ? t('loginBtn') : t('signUpBtn')}
             </button>
           </form>
 
-          <div style={{ textAlign: 'center', marginTop: '2.5rem', fontSize: '1.4rem', color: '#64748B', fontWeight: '500' }}>
+          <div style={{ textAlign: 'center', marginTop: '2.5rem', fontSize: '1.4rem', color: 'var(--text-secondary)', fontWeight: '500' }}>
             {isLogin ? t('noAccount') : t('hasAccount')}{' '}
             <button 
               onClick={() => { setIsLogin(!isLogin); setError(''); }} 
-              style={{ background: 'none', border: 'none', fontSize: '1.4rem', fontWeight: '700', cursor: 'pointer', color: '#2563EB', transition: 'color 0.2s' }}
+              style={{ background: 'none', border: 'none', fontSize: '1.4rem', fontWeight: '700', cursor: 'pointer', color: 'var(--card-text)', transition: 'color 0.2s' }}
             >
               {isLogin ? t('signUpBtn') : t('loginBtn')}
             </button>

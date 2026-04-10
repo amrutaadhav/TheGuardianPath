@@ -18,8 +18,11 @@ app.get('/', (req, res) => {
   res.send('<h1>Guardian Path Backend is Running</h1><p>The API is active. Please access the application via the frontend at <a href="http://localhost:5173">http://localhost:5173</a></p>');
 });
 
-const dbPath = path.join(__dirname, 'db.json');
-const modulesDataPath = path.join(__dirname, '..', 'frontend', 'src', 'data', 'modulesData.json');
+const isVercel = process.env.VERCEL === '1';
+const originalDbPath = path.join(__dirname, 'db.json');
+const tmpDbPath = '/tmp/db.json';
+
+const getDbPath = () => isVercel ? tmpDbPath : originalDbPath;
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
@@ -54,15 +57,29 @@ const INITIAL_MESSAGES = {
 
 // Helper to initialize and read DB
 const readDB = () => {
-  if (!fs.existsSync(dbPath)) {
-    fs.writeFileSync(dbPath, JSON.stringify({ users: [] }));
+  const currentDbPath = getDbPath();
+  try {
+    if (!fs.existsSync(currentDbPath)) {
+      if (isVercel && fs.existsSync(originalDbPath)) {
+        fs.copyFileSync(originalDbPath, currentDbPath);
+      } else {
+        fs.writeFileSync(currentDbPath, JSON.stringify({ users: [] }));
+      }
+    }
+    return JSON.parse(fs.readFileSync(currentDbPath, 'utf8'));
+  } catch (error) {
+    console.error("DB Read Error:", error);
+    return { users: [] };
   }
-  return JSON.parse(fs.readFileSync(dbPath, 'utf8'));
 };
 
 // Helper to save DB
 const writeDB = (data) => {
-  fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
+  try {
+    fs.writeFileSync(getDbPath(), JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error("DB Write Error:", error);
+  }
 };
 
 // --- Auth Routes ---

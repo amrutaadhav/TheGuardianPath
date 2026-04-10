@@ -133,7 +133,7 @@ export default function SecurePasswordModule() {
         >
           <ChevronLeft size={24} /> Previous
         </button>
-        <div style={{ fontSize: '1.5rem', fontWeight: 'bold', background: '#E2E8F0', padding: '0.5rem 1rem', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <div style={{ fontSize: '1.5rem', fontWeight: 'bold', background: '#E2E8F0', padding: '0.5rem 1rem', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#000000' }}>
           Scenario {selectedQuizIndex + 1}
           {isFinishedCurrent && <CheckCircle size={20} color="#059669" />}
         </div>

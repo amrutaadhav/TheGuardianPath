@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { MailWarning, Lock, Play, Star, BookOpen, MessageSquareWarning, Verified, Award, Bot, Megaphone, Video } from 'lucide-react';
+import { MailWarning, Lock, Play, Star, BookOpen, MessageSquareWarning, Verified, Award, Bot, Megaphone, Video, Eye, Target, ChevronRight, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { useProgress } from '../context/ProgressContext';
@@ -58,7 +58,7 @@ export default function Dashboard() {
       <OnboardingPopup />
 
       <div style={{ marginBottom: '3rem' }}>
-        <h1 style={{ fontSize: '3rem', display: 'flex', alignItems: 'center' }}>
+        <h1 style={{ fontSize: '3rem', display: 'flex', alignItems: 'center', color: 'var(--accent-primary)' }}>
           {t('welcome')}
           <VoiceButton text={t('welcome') + ". " + t('safeSpace')} />
         </h1>
@@ -72,11 +72,11 @@ export default function Dashboard() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <div style={{ background: 'white', padding: '1.5rem', borderRadius: '50%', border: '4px solid #000', position: 'relative' }}>
+        <div style={{ background: 'var(--card-bg)', padding: '1.5rem', borderRadius: '50%', border: '4px solid var(--card-text)', position: 'relative' }}>
           <Star size={48} color="var(--accent-primary)" />
           {completedModules.length === totalModules && (
-            <div style={{ position: 'absolute', top: -10, right: -10, background: 'gold', borderRadius: '50%', padding: '0.2rem', border: '2px solid black' }}>
-              <Award size={24} color="#000" />
+            <div style={{ position: 'absolute', top: -10, right: -10, background: 'var(--accent-primary)', borderRadius: '50%', padding: '0.2rem', border: '2px solid var(--card-text)' }}>
+              <Award size={24} color="var(--card-text)" />
             </div>
           )}
         </div>
@@ -93,7 +93,7 @@ export default function Dashboard() {
 
       {/* New Upcoming Labs Section */}
       <div style={{ marginBottom: '4rem', marginTop: '2rem' }}>
-        <h2 style={{ fontSize: '2rem', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '1rem', borderBottom: '4px solid #E2E8F0', paddingBottom: '1rem' }}>
+        <h2 style={{ fontSize: '2rem', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '1rem', borderBottom: '4px solid var(--accent-secondary)', paddingBottom: '1rem', color: 'var(--text-main)' }}>
           <Star className="text-warning" size={32} /> {t('innovationLabs')}
         </h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
@@ -131,8 +131,11 @@ export default function Dashboard() {
       </div>
 
       <div>
-        <h2 style={{ fontSize: '2rem', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '1rem', borderBottom: '4px solid #E2E8F0', paddingBottom: '1rem' }}>
-          <BookOpen className="text-secondary" size={32} /> {t('courses')}
+        <h2 style={{ fontSize: '2rem', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '1rem', borderBottom: '4px solid var(--accent-secondary)', paddingBottom: '1rem', color: 'var(--text-main)', justifyContent: 'space-between' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <Eye className="text-secondary" size={32} /> {t('courses')}
+          </div>
+          <span style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', fontWeight: 'normal' }}>(Swipe horizontally ➔)</span>
         </h2>
         
         <div className="module-grid">
@@ -145,42 +148,64 @@ export default function Dashboard() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                style={{ border: completed ? '3px solid var(--accent-success)' : '3px solid #CBD5E1' }}
+                whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(18, 22, 41, 0.3)' }}
+                style={{ border: completed ? '4px solid var(--accent-success)' : '4px solid #121629', position: 'relative', overflow: 'hidden' }}
               >
+                {/* Background Watermark Symbol */}
+                <div style={{ position: 'absolute', right: '-10px', top: '10px', opacity: 0.05, zIndex: 0, pointerEvents: 'none', transform: 'rotate(15deg)' }}>
+                   {React.cloneElement(mod.icon, { size: 150 })}
+                </div>
+
                 {completed && (
-                  <span className="badge" style={{ background: 'var(--accent-success)', color: 'white', border: 'none' }}>
+                  <span className="badge" style={{ background: 'var(--accent-success)', color: 'white', border: '2px solid #121629', zIndex: 1 }}>
                     <Verified size={16} style={{ display: 'inline', marginRight: '4px', verticalAlign: 'text-bottom' }} />
                     Mastered
                   </span>
                 )}
-                <div className="module-icon-wrap" style={{ 
-                  background: completed ? '#D1FAE5' : `${mod.color}15`, 
-                  color: completed ? 'var(--accent-success)' : mod.color, 
-                  border: `3px solid ${completed ? 'var(--accent-success)' : mod.color}` 
-                }}>
-                  {mod.icon}
+
+                <div style={{ display: 'flex', flexDirection: 'row', gap: '1.5rem', marginBottom: '1.5rem', alignItems: 'flex-start', zIndex: 1 }}>
+                   <div style={{ 
+                     flex: '0 0 90px', 
+                     height: '90px', 
+                     background: completed ? 'var(--accent-success)' : mod.color, 
+                     borderRadius: '20px', 
+                     display: 'flex', 
+                     alignItems: 'center', 
+                     justifyContent: 'center',
+                     border: '3px solid #121629',
+                     boxShadow: '0 8px 0px rgba(18,22,41,1)'
+                   }}>
+                     {React.cloneElement(mod.icon, { size: 45, color: '#fffffe', strokeWidth: 1.5 })}
+                   </div>
+                   
+                   <div style={{ flex: 1 }}>
+                     <h3 style={{ fontSize: '1.8rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: 'var(--card-text)', fontWeight: '800', lineHeight: '1.2' }}>
+                       {mod.title}
+                       <VoiceButton text={mod.title + ". " + mod.description} />
+                     </h3>
+                     <p style={{ fontSize: '1.3rem', color: 'var(--card-text)', margin: 0, lineHeight: '1.4' }}>{mod.description}</p>
+                   </div>
                 </div>
-                <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                  {mod.title}
-                  <VoiceButton text={mod.title + ". " + mod.description} />
-                </h3>
-                <p style={{ flex: 1, fontSize: '1.3rem', color: 'var(--text-secondary)', marginBottom: '1rem' }}>{mod.description}</p>
                 
-                <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', background: 'rgba(255,255,255,0.05)', padding: '1rem', borderRadius: '12px', marginBottom: '1rem', color: 'var(--text-main)', fontSize: '1.2rem', fontWeight: '700', border: '1px solid rgba(255,255,255,0.1)' }}>
-                  <span style={{ background: '#2563EB', color: 'white', padding: '0.3rem 0.8rem', borderRadius: '6px', boxShadow: '0 2px 4px rgba(37,99,235,0.2)' }}>
+                <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', background: 'var(--bg-color-main)', padding: '1.2rem', borderRadius: '16px', marginBottom: '1.5rem', color: 'var(--text-main)', fontSize: '1.2rem', fontWeight: '700', border: '2px solid #121629', zIndex: 1 }}>
+                  <Target size={20} color="var(--accent-primary)" />
+                  <span style={{ background: 'var(--accent-primary)', color: 'var(--card-text)', padding: '0.4rem 1rem', borderRadius: '8px', border: '2px solid #121629' }}>
                     {completedScenarios[mod.id]?.length || 0} / 20
-                  </span> {t('practiceScenariosLabel')}
+                  </span> 
+                  {t('practiceScenariosLabel')}
                 </div>
 
                 <button 
                   className={completed ? 'btn-success' : (mod.status === 'Ready' ? 'btn-primary' : 'btn-secondary')}
-                  style={{ width: '100%', marginTop: '2rem' }}
+                  style={{ width: '100%', marginTop: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', zIndex: 1, border: '2px solid #121629' }}
                   onClick={() => mod.status === 'Ready' && navigate(mod.path)}
                   disabled={mod.status !== 'Ready'}
                 >
                   {mod.status === 'Ready' ? (
                     <>
-                      <Play size={24} /> {completed ? t('reviewModule') : t('begin')}
+                      {completed ? <Sparkles size={24} /> : <Play size={24} />} 
+                      {completed ? t('reviewModule') : t('begin')}
+                      <ChevronRight size={20} />
                     </>
                   ) : (
                     t('comingSoon')

@@ -15,7 +15,8 @@ export function ProgressProvider({ children }) {
         setCompletedModules(user.completedModules);
         setCompletedScenarios(user.completedScenarios || {});
       }
-      axios.get('http://localhost:5000/api/progress', { headers: { 'x-auth-token': token } })
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      axios.get(`${API_URL}/api/progress`, { headers: { 'x-auth-token': token } })
         .then(res => {
           setCompletedModules(res.data.completedModules || []);
           setCompletedScenarios(res.data.completedScenarios || {});
@@ -32,7 +33,8 @@ export function ProgressProvider({ children }) {
       setCompletedModules(prev => [...prev, id]);
       if (token) {
         try {
-          const res = await axios.post('http://localhost:5000/api/progress/complete', { moduleId: id }, { headers: { 'x-auth-token': token } });
+          const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+          const res = await axios.post(`${API_URL}/api/progress/complete`, { moduleId: id }, { headers: { 'x-auth-token': token } });
           setCompletedModules(res.data.completedModules || []);
           setCompletedScenarios(res.data.completedScenarios || {});
         } catch (err) {
@@ -54,8 +56,9 @@ export function ProgressProvider({ children }) {
 
     if (token) {
       try {
+        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
         const res = await axios.post(
-          'http://localhost:5000/api/progress/scenario', 
+          `${API_URL}/api/progress/scenario`, 
           { moduleId, scenarioIndex }, 
           { headers: { 'x-auth-token': token } }
         );

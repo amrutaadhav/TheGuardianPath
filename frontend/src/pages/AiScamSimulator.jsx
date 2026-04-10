@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './AiScamSimulator.css';
+import { useLanguage } from '../context/LanguageContext';
 
 const API_BASE_URL = 'http://localhost:5000/api';
 
@@ -98,7 +99,7 @@ const UI = {
 const MAX_TURNS = 4;
 
 export default function AiScamSimulator() {
-  const [lang, setLang]           = useState('en');
+  const { lang, toggleLanguage } = useLanguage();
   const [scenarioIdx, setScenarioIdx] = useState(0);
   const [messages, setMessages]   = useState([]);
   const [input, setInput]         = useState('');
@@ -164,7 +165,7 @@ export default function AiScamSimulator() {
   };
 
   const handleScenarioChange = (e) => { setScenarioIdx(Number(e.target.value)); };
-  const handleLang = () => { setLang(l => l === 'en' ? 'mr' : 'en'); setScenarioIdx(0); };
+  const handleLang = () => { toggleLanguage(); setScenarioIdx(0); };
 
   return (
     <div className="app-container">

@@ -30,7 +30,9 @@ function MainApp() {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          padding: '1.5rem 3rem',
+          padding: '1.5rem 2rem',
+          width: '100%',
+          boxSizing: 'border-box',
           background: '#0F172A', /* Deep Slate/Navy */
           borderBottom: '4px solid #3B82F6', /* Vibrant Blue Accent */
           position: 'sticky',

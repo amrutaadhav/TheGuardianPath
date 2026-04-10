@@ -114,13 +114,14 @@ export default function Dashboard() {
              <div style={{ position: 'absolute', top: '-5px', right: '-5px', opacity: 0.1 }}><Megaphone size={180} /></div>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} style={{ background: 'linear-gradient(135deg, #064E3B 0%, #065F46 100%)', padding: '2.5rem', borderRadius: '24px', color: 'white', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} style={{ background: 'linear-gradient(135deg, #064E3B 0%, #065F46 100%)', padding: '2.5rem', borderRadius: '24px', color: 'white', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.1)', cursor: 'pointer', transition: 'transform 0.2s' }} whileHover={{ scale: 1.02 }} onClick={() => navigate('/module/deepfake-lab')}>
              <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1.5rem', borderRadius: '16px', width: 'fit-content', marginBottom: '1.5rem' }}>
                 <Video size={40} color="#6EE7B7" />
              </div>
              <h3 style={{ fontSize: '2.2rem', marginBottom: '1rem', fontWeight: 'bold' }}>Deepfake Lab</h3>
-             <p style={{ fontSize: '1.4rem', color: '#A7F3D0', lineHeight: '1.6', marginBottom: '0', flex: 1 }}>Train your eyes to spot AI-generated videos and voices trying to impersonate family members.</p>
-             <div style={{ position: 'absolute', top: '-5px', right: '-5px', opacity: 0.1 }}><Video size={180} /></div>
+             <p style={{ fontSize: '1.4rem', color: '#A7F3D0', lineHeight: '1.6', marginBottom: '1.5rem', flex: 1 }}>Train your eyes to spot AI-generated videos and voices trying to impersonate family members.</p>
+             <button style={{ background: '#059669', color: 'white', padding: '1rem', borderRadius: '12px', border: 'none', fontWeight: 'bold', fontSize: '1.2rem', cursor: 'pointer', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }} onClick={(e) => { e.stopPropagation(); navigate('/module/deepfake-lab'); }}><Play size={18} /> Launch Simulator</button>
+             <div style={{ position: 'absolute', top: '-5px', right: '-5px', opacity: 0.1, zIndex: 0 }}><Video size={180} /></div>
           </motion.div>
 
         </div>

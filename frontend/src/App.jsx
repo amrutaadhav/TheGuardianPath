@@ -62,19 +62,6 @@ function MainApp() {
             >
               <Globe size={20} /> {lang === 'en' ? 'मराठी' : 'English'}
             </button>
-
-            <a 
-              href="tel:1930"
-              title="National Cyber Crime Reporting Helpline"
-              style={{
-                display: 'flex', flexWrap: 'nowrap', alignItems: 'center', gap: '0.5rem',
-                background: 'var(--accent-danger)', border: '2px solid #121629', padding: '0.65rem 1.2rem', borderRadius: '12px',
-                color: '#fffffe', fontWeight: 'bold', fontSize: '1.4rem', cursor: 'pointer', boxSizing: 'border-box', textDecoration: 'none', whiteSpace: 'nowrap'
-              }}
-            >
-              <Phone size={20} color="#fffffe" /> 1930
-            </a>
-
             {token ? (
               <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                 <Link to="/" style={{

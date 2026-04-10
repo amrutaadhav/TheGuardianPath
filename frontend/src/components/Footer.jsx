@@ -29,6 +29,9 @@ export default function Footer() {
         <div style={{ flex: '1 1 300px' }}>
           <h4 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', color: '#fffffe' }}>{t('helpNow')}</h4>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <li style={{ fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#fffffe' }}>
+              <Phone size={18} color="#eebbc3" /> <strong>{t('nationalFraud') || 'National Fraud Helpline:'}</strong> <a href="tel:1930" style={{ color: '#eebbc3', textDecoration: 'none', fontWeight: 'bold' }}>1930</a>
+            </li>
             <li style={{ fontSize: '1.2rem', color: '#b8c1ec' }}>
               {t('panicText')}
             </li>

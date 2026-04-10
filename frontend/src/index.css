@@ -388,3 +388,62 @@ button:active, .btn:active {
   transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* =========================================
+   RESPONSIVE DESIGN (MOBILE & TABLET)
+========================================= */
+@media (max-width: 768px) {
+  html {
+    font-size: 90%; /* Scales down all REM-based typography and paddings */
+  }
+  
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .glass-panel {
+    padding: 1.5rem;
+  }
+
+  .progress-card {
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .module-card {
+    padding: 1.5rem;
+    min-width: 85vw; /* Keeps horizontal scrolling smooth */
+  }
+
+  .module-grid {
+    gap: 1.5rem;
+  }
+
+  .sandbox-content {
+    padding: 1.5rem;
+  }
+
+  .sandbox-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  h1 { font-size: 2.5rem !important; }
+  h2 { font-size: 2rem !important; }
+  h3 { font-size: 1.6rem !important; }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 85%; /* Ultra narrow devices */
+  }
+  
+  .btn, button {
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+

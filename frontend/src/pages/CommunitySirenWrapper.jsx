@@ -1,50 +1,49 @@
 import React from 'react';
-import { ArrowLeft, Megaphone } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import VoiceButton from '../components/VoiceButton';
 
 export default function CommunitySirenWrapper() {
   const navigate = useNavigate();
 
   return (
-    <div className="animate-fade-in" style={{ padding: '0 1rem', paddingBottom: '4rem', height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ marginBottom: '2rem' }}>
-        <button className="btn-secondary" onClick={() => navigate('/')}>
-          <ArrowLeft size={24} /> Back to Home
+    <div style={{ height: 'calc(100vh - 85px)', width: '100%', position: 'relative', display: 'flex', flexDirection: 'column' }}>
+      
+      {/* Floating Back Button */}
+      <div style={{ background: '#232946', padding: '1rem', borderBottom: '2px solid #121629', display: 'flex', alignItems: 'center' }}>
+        <button 
+          onClick={() => navigate('/')}
+          style={{
+            background: '#eebbc3',
+            color: '#232946',
+            border: '2px solid #121629',
+            padding: '0.6rem 1.2rem',
+            borderRadius: '8px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            fontWeight: 'bold',
+            cursor: 'pointer',
+            fontSize: '1.2rem'
+          }}
+        >
+          <ArrowLeft size={18} /> Exit Integration Mode
         </button>
+        <span style={{ marginLeft: '1.5rem', color: 'white', fontWeight: 'bold', fontSize: '1.4rem' }}>
+          Secure Bridge: Active
+        </span>
       </div>
 
-      <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
-        <h1 style={{ fontSize: '3rem', color: '#0F172A', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginBottom: '1rem' }}>
-          <Megaphone size={40} color="#DC2626" /> Local Scam Alerts (Community Siren)
-          <VoiceButton text="Local Scam Alerts" />
-        </h1>
-        <p style={{ fontSize: '1.4rem', color: '#475569' }}>
-          This integrated tool helps you report and view real-time scams in your neighborhood.
-        </p>
-      </div>
-
-      <motion.div
-        initial={{ opacity: 0, scale: 0.98 }}
-        animate={{ opacity: 1, scale: 1 }}
-        style={{
-          flex: 1,
-          background: 'white',
-          borderRadius: '24px',
-          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-          overflow: 'hidden',
-          border: '4px solid #1E293B'
-        }}
-      >
+      {/* Flush iFrame */}
+      <div style={{ flex: 1, width: '100%', background: '#fff' }}>
         <iframe 
           src="https://community-siren.vercel.app/" 
           width="100%" 
           height="100%" 
-          style={{ border: 'none' }}
+          style={{ border: 'none', display: 'block' }}
           title="Community Siren Scams Portal"
         />
-      </motion.div>
+      </div>
+
     </div>
   );
 }

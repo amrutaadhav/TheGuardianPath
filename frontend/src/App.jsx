@@ -8,6 +8,7 @@ import SecurePasswordModule from './pages/SecurePasswordModule';
 import DigitalIdModule from './pages/DigitalIdModule';
 import AiScamSimulator from './pages/AiScamSimulator';
 import DeepfakeLab from './pages/DeepfakeLab';
+import CommunitySirenWrapper from './pages/CommunitySirenWrapper';
 import Footer from './components/Footer';
 import AuthPage from './pages/AuthPage';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
@@ -146,6 +147,7 @@ function MainApp() {
               <Route path="/module/secure-pin" element={<SecurePasswordModule />} />
               <Route path="/module/digital-id" element={<DigitalIdModule />} />
               <Route path="/module/ai-scam-simulator" element={<AiScamSimulator />} />
+              <Route path="/module/community-siren" element={<CommunitySirenWrapper />} />
               <Route path="/module/deepfake-lab" element={<DeepfakeLab />} />
             </Routes>
           )}

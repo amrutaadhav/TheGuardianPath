@@ -108,13 +108,14 @@ export default function Dashboard() {
              <div style={{ position: 'absolute', top: '-5px', right: '-5px', opacity: 0.1, zIndex: 0 }}><Bot size={180} /></div>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} style={{ background: 'linear-gradient(135deg, #7F1D1D 0%, #991B1B 100%)', padding: '2.5rem', borderRadius: '24px', color: 'white', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}>
-             <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1.5rem', borderRadius: '16px', width: 'fit-content', marginBottom: '1.5rem' }}>
-                <Megaphone size={40} color="#FCA5A5" />
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} style={{ background: '#232946', padding: '3rem', borderRadius: '24px', color: '#fffffe', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.1)', cursor: 'pointer', transition: 'transform 0.2s', gridColumn: '1 / -1', border: '4px solid #121629' }} whileHover={{ scale: 1.01 }} onClick={() => navigate('/module/community-siren')}>
+             <div style={{ background: '#eebbc3', padding: '1.5rem', borderRadius: '16px', width: 'fit-content', marginBottom: '1.5rem', zIndex: 1 }}>
+                <Megaphone size={48} color="#232946" />
              </div>
-             <h3 style={{ fontSize: '2.2rem', marginBottom: '1rem', fontWeight: 'bold' }}>{t('communitySirenTitle')}</h3>
-             <p style={{ fontSize: '1.4rem', color: '#FECACA', lineHeight: '1.6', marginBottom: '0', flex: 1 }}>{t('communitySirenDesc')}</p>
-             <div style={{ position: 'absolute', top: '-5px', right: '-5px', opacity: 0.1 }}><Megaphone size={180} /></div>
+             <h3 style={{ fontSize: '2.8rem', marginBottom: '1rem', fontWeight: 'bold', color: '#fffffe', zIndex: 1 }}>{t('communitySirenTitle')}</h3>
+             <p style={{ fontSize: '1.6rem', color: '#b8c1ec', lineHeight: '1.6', marginBottom: '2rem', flex: 1, zIndex: 1, maxWidth: '800px' }}>{t('communitySirenDesc')}</p>
+             <button style={{ background: '#eebbc3', color: '#232946', padding: '1.25rem 2rem', borderRadius: '12px', border: '2px solid #121629', fontWeight: 'bold', fontSize: '1.4rem', cursor: 'pointer', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', width: 'fit-content', boxShadow: '0 4px 6px rgba(18, 22, 41, 0.3)' }} onClick={(e) => { e.stopPropagation(); navigate('/module/community-siren'); }}><Play size={20} /> Enter Alert Network</button>
+             <div style={{ position: 'absolute', bottom: '-20px', right: '20px', opacity: 0.05, zIndex: 0 }}><Megaphone size={250} /></div>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} style={{ background: 'linear-gradient(135deg, #064E3B 0%, #065F46 100%)', padding: '2.5rem', borderRadius: '24px', color: 'white', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.1)', cursor: 'pointer', transition: 'transform 0.2s' }} whileHover={{ scale: 1.02 }} onClick={() => navigate('/module/deepfake-lab')}>
